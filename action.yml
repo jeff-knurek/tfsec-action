@@ -30,6 +30,10 @@ inputs:
       GitHub token used for making authenticated requests to the GitHub API,
       which helps avoid rate limiting
     required: false
+  quiet_output:
+    description: a boolean to include to remove verbose tfsec request logs
+    required: false
+    default: ""
 outputs:
   tfsec-return-code:
     description: "tfsec command return code"

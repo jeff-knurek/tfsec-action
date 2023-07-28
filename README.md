@@ -46,6 +46,8 @@ There are a number of optional inputs that can be used in the `with:` block.
 
 **github_token** - a GitHub token to be used when calling the GitHub API, which helps in avoiding rate-limiting
 
+**quiet_output** - a boolean to include to remove verbose tfsec request logs
+
 ### tfsec_vars
 
 `tfsec` provides an [extensive number of arguments](https://aquasecurity.github.io/tfsec/v0.63.1/getting-started/usage/) which can be passed through as in the example below;
@@ -77,7 +79,7 @@ jobs:
 - bash: [GPL 3.0 or later](https://www.gnu.org/licenses/gpl-3.0.html)
 - curl: [curl license](https://curl.se/docs/copyright.html)
 - git: [GPL 2.0 or later](https://github.com/git/git/blob/master/COPYING)
-- jq: [MIT](https://github.com/stedolan/jq/blob/master/COPYING) 
+- jq: [MIT](https://github.com/stedolan/jq/blob/master/COPYING)
 
 ## License
 

@@ -2,6 +2,10 @@
 
 set -xe
 
+if [ -n "$QUIET_OUTPUT" ] ; then
+  set +x
+fi
+
 if [ -z "${INPUT_GITHUB_TOKEN}" ] ; then
   echo "::notice title=GitHub API token::Consider setting a GITHUB_TOKEN to prevent GitHub api rate limits"
 fi
@@ -54,7 +58,7 @@ if [ -n "${INPUT_ADDITIONAL_ARGS}" ]; then
   TFSEC_ARGS_OPTION="${INPUT_ADDITIONAL_ARGS}"
 fi
 
-if [ -n "${INPUT_SOFT_FAIL}" ]; then 
+if [ -n "${INPUT_SOFT_FAIL}" ]; then
   SOFT_FAIL="--soft-fail"
 fi
 
